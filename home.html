@@ -1,9 +1,187 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
+    UNORTHODOX
   </title>
+  <link rel="stylesheet" type="text/css" href="home.css"/>
+
+  <link rel="javascript" type="text/js" href="home.js"/>
+
+  <link rel="conact" type="text/html" href="contact.html"/>
+
+  <link rel="faq" type="text/contact" href="faq.html"/>
+
+  <link rel="about" type="text/about" href="about.html"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 </head>
+
 <body>
+  <!-- NAV BAR -->
+  <header>
+    <div  style="background-color:black; height:100px;"  class="navbarContainer col-md-12">
+      <ul class="navbar">
+        <li class="l1"><a href="Home.html">HOME</a></li>
+        <li class="l1"><a href="Men.html">MEN</a></li>
+        <li class="l1"><a href="Women.html">WOMEN</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- COUNTDOWN -->
+  <div class="col-md-12" style="height:100px;">
+    <h1> RELEASE DATE</h1>
+    <div id="demo"></div>
+  </div>
+
+
+<div style="height:500px;"> </div>
+  <!-- Center -->
+
+    <!-- SUBSCRIPTION B0X -->
+
+    <section>
+        <form>
+            <input type="text" placeholder="Email">
+            <button type="submit" class="btn first">
+                <img src="https://alikinvv.github.io/subscription-animation/build/mail.svg" alt="">
+                <span class="start">SUBSCRIBE!</span>
+                <span class="done">THANK YOU!</span>
+            </button>
+        </form>
+    </section>
+
+
+  <!-- FOOTER -->
+  <footer style="background-color: black; height:50px;">
+    <button type="button" class=" btn-outline-success">
+    <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="Contact.html">CONTACT</a>
+      </button>
+
+    <button type="button" class="btn-outline-success">
+      <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="About.html">ABOUT</a>
+    </button>
+
+    <button type="button" class="btn-outline-success">
+      <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="FAQ.html">FAQ</a>
+    </button>
+  </footer>
+
+
+<script>
+// SUBSCRIPTION BOX //
+
+$(document).ready(function () {
+    var basicTimeline = anime.timeline(),
+        doneTimeline = anime.timeline();
+    var trigger = true;
+
+    $('form .btn').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('first')) {
+            trigger = false;
+            $(this).removeClass('first').addClass('active');
+            basicTimeline
+                .add({
+                    targets: 'button',
+                    width: 65,
+                    paddingLeft: 17,
+                    paddingRight: 17,
+                    translateX: 97,
+                    scale: 1.2,
+                    duration: 1500
+                })
+                .add({
+                    targets: 'form input',
+                    width: 370,
+                    opacity: 1,
+                    duration: 2000,
+                    offset: '-=1500'
+                })
+                .add({
+                    targets: 'form button img',
+                    opacity: 1,
+                    translateX: 15,
+                    duration: 2000,
+                    offset: '-=1700',
+                    complete: function(anim) {
+                        trigger = true;
+                    }
+                })
+        } else if ($(this).hasClass('active') && trigger) {
+            $(this).removeClass('active').addClass('done');
+            doneTimeline
+                .add({
+                    targets: 'button',
+                    translateX: 180,
+                    duration: 1500,
+                    scale: 1.2
+                })
+                .add({
+                    targets: 'button img',
+                    opacity: 0,
+                    duration: 1000,
+                    offset: '-=1200'
+                })
+                .add({
+                    targets: 'button',
+                    width: 187,
+                    scale: 1.2,
+                    translateX: -23,
+                    duration: 1500,
+                    offset: '-=1000'
+                })
+                .add({
+                    targets: 'form input',
+                    width: 0,
+                    translateX: -193,
+                    duration: 1500,
+                    offset: '-=1500'
+                })
+                .add({
+                    targets: 'form button .done',
+                    opacity: 1,
+                    duration: 1000,
+                    offset: '-=1500'
+                })
+        }
+    });
+
+});
+
+//Release Countdown //
+var countDownDate = new Date("Jan 20, 2019 15:37:25").getTime();
+
+var x = setInterval(function() {
+
+
+    var now = new Date().getTime();
+
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
+
+</script>
+
 </body>
 <html>
