@@ -3,8 +3,42 @@
 <head>
 <title></title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
   <link rel="formal" type="text/css" href="formal.css"/>
+
+  <!-- <link rel="stylesheet" type="text/css" href="home.css"/>
+
+  <link rel="javascript" type="text/js" href="home.js"/> -->
+
+  <link rel="contact" type="text/html" href="contact.html"/>
+
+  <!-- <link rel="stylesheet" type="text/css" href="contact.css"/> -->
+
+  <link rel="faq" type="text/html" href="faq.html"/>
+
+  <!-- <link rel="stylesheet" type="text/css" href="faq.css"/> -->
+
+  <link rel="about" type="text/html" href="about.html"/>
+
+  <!-- <link rel="stylesheet" type="text/css" href="about.css"/> -->
+
+  <link rel="men" type="text/html" href="men.html"/>
+<!--
+  <link rel="stylesheet" type="text/css" href="men.css"/> -->
+
+  <link rel="informal" type="text/html" href="informal.html"/>
+
+  <!-- <link rel="stylesheet" type="text/css" href="informal.css"/> -->
+<!-- API SCRIPT TAGS -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz"></script>
+
+  <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
 </head>
 <div>
 <body>
@@ -44,6 +78,20 @@
       </div>
       <div class="w3-container">
         <img src="https://a3655836d5c58a086ac2-4e8d43a89f100386d472e9f1a1dc59ca.ssl.cf3.rackcdn.com/images/original/966181791_01.jpg" style="width:100%">
+  <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black"
+            class="snipcart-add-item"
+            data-item-id="2"
+            data-item-name="UNDOX Blue Stripes Suit"
+            data-item-price="5,550"
+            data-item-weight="20"
+            data-item-url="http://myapp.com/products/bacon"
+            data-item-description="Blue Striped Suit">
+                Buy Now
+        <i class="fa fa-shopping-cart"></i></button>
+</div>
+
+
         <p>UNDOX Blue Stripes Suit<br><b>$5,550</b></p>
       </div>
     </div>
@@ -108,5 +156,12 @@
       <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="FAQ.html">FAQ</a>
     </button>
   </footer>
+
+  <script>
+  anything = {'TRN-Api-Key': 'NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz'}
+response = requests.get("https://api.fortnitetracker.com/v1/profile/pc/ninja", headers=anything)
+apiInfo = response.text
+print("The API info: ", apiInfo)
+  </script>
   </body>
 </html>
