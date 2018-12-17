@@ -158,10 +158,31 @@
   </footer>
 
   <script>
-  anything = {'TRN-Api-Key': 'NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz'}
-response = requests.get("https://api.fortnitetracker.com/v1/profile/pc/ninja", headers=anything)
-apiInfo = response.text
-print("The API info: ", apiInfo)
+  var snipcart = 'NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz';
+  var datakey = 'data-api-key';
+  var acceptStatement = 'Accept:', acceptValue = 'application/json';
+  var headers = {datakey: snipcart,
+                acceptStatement: acceptValue };
+
+response = fetch("https://app.snipcart.com/api", {
+  headers: headers}
+).then(res => res.json())
+.then(response =>
+  console.log('Success:', JSON.stringify(response)))
+
+// fetch(url, {
+//   method: 'POST', // or 'PUT'
+//   body: JSON.stringify(data), // data can be `string` or {object}!
+//   headers:{
+//     'Content-Type': 'application/json'
+//   }
+// }).then(res => res.json())
+// .then(response => console.log('Success:', JSON.stringify(response)))
+// .catch(error => console.error('Error:', error));
+
+
+// apiInfo = response.text
+// print("The API info: ", apiInfo)
   </script>
   </body>
 </html>
