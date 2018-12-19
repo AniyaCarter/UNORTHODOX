@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-  <link rel="formal" type="text/css" href="formal.css"/>
+    <link rel="formal" type="text/css" href="formal.css"/>
 
-  <!-- <link rel="stylesheet" type="text/css" href="home.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="home.css"/>
 
-  <link rel="javascript" type="text/js" href="home.js"/> -->
+    <link rel="javascript" type="text/js" href="home.js"/> -->
 
-  <link rel="contact" type="text/html" href="contact.html"/>
+    <!-- <link rel="stylesheet" type="text/css" href="contact.css"/> -->
 
-  <!-- <link rel="stylesheet" type="text/css" href="contact.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="faq.css"/> -->
 
-  <link rel="faq" type="text/html" href="faq.html"/>
+    <!-- <link rel="stylesheet" type="text/css" href="about.css"/> -->
 
-  <!-- <link rel="stylesheet" type="text/css" href="faq.css"/> -->
+  <!--
+    <link rel="stylesheet" type="text/css" href="men.css"/> -->
 
-  <link rel="about" type="text/html" href="about.html"/>
 
-  <!-- <link rel="stylesheet" type="text/css" href="about.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="informal.css"/> -->
+  <!-- API SCRIPT TAGS -->
 
-  <link rel="men" type="text/html" href="men.html"/>
-<!--
-  <link rel="stylesheet" type="text/css" href="men.css"/> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-  <link rel="informal" type="text/html" href="informal.html"/>
+    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz"></script>
 
-  <!-- <link rel="stylesheet" type="text/css" href="informal.css"/> -->
-<!-- API SCRIPT TAGS -->
+    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-  <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz"></script>
-
-  <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
 
 </head>
-<div>
+<div> <!-- Not sure what this corresponds to -->
+
 <body>
   <header>
     <div  style="background-color:black; height:200px;"  class="navbarContainer">
       <ul class="navbar">
         <li class="l1"><a href="Home.html">HOME</a></li>
         <li class="l1"><a href="Men.html">MEN</a></li>
+
       </ul>
     </div>
   </header>
+
+<!--  One way to add text to the page        <div id="mekestest">
+                                                <p>Let's see what happens here</p>
+                                             </div>
+-->
 
 <h1>MEN</h1>
 <h2>Formal Wear</h2>
@@ -78,9 +78,8 @@
       </div>
       <div class="w3-container">
         <img src="https://a3655836d5c58a086ac2-4e8d43a89f100386d472e9f1a1dc59ca.ssl.cf3.rackcdn.com/images/original/966181791_01.jpg" style="width:100%">
-  <div class="w3-display-middle w3-display-hover">
-        <button class="w3-button w3-black"
-            class="snipcart-add-item"
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black snipcart-add-item"
             data-item-id="2"
             data-item-name="UNDOX Blue Stripes Suit"
             data-item-price="5,550"
@@ -89,12 +88,12 @@
             data-item-description="Blue Striped Suit">
                 Buy Now
         <i class="fa fa-shopping-cart"></i></button>
-</div>
+      </div>
 
 
         <p>UNDOX Blue Stripes Suit<br><b>$5,550</b></p>
       </div>
-    </div>
+  </div>
 
     <div class="w3-col l3 s6">
       <div class="w3-container">
@@ -158,31 +157,34 @@
   </footer>
 
   <script>
-  var snipcart = 'NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz';
-  var datakey = 'data-api-key';
-  var acceptStatement = 'Accept:', acceptValue = 'application/json';
-  var headers = {datakey: snipcart,
-                acceptStatement: acceptValue };
 
-response = fetch("https://app.snipcart.com/api", {
-  headers: headers}
-).then(res => res.json())
-.then(response =>
-  console.log('Success:', JSON.stringify(response)))
+  var publicPayMayaKey = "pk-nRO7clSfJrojuRmShqRbihKPLdGeCnb9wiIWF8meJE9:";
+  var secretPayMayaKey = "sk-jZK0i8yZ30ph8xQSWlNsF9AMWfGOd3BaxJjQ2CDCCZb:";
+  var payMayaURL = "https://sandbox-checkout-api.paymaya.com/v1/checkouts";
+  
+  var testCreditCard = {"card": "MASTERCARD", "cardNumber": "5123456789012346", "expiryYear": "19", "expiryMonth":"05", "csv": "111"};
 
-// fetch(url, {
-//   method: 'POST', // or 'PUT'
-//   body: JSON.stringify(data), // data can be `string` or {object}!
-//   headers:{
-//     'Content-Type': 'application/json'
-//   }
-// }).then(res => res.json())
-// .then(response => console.log('Success:', JSON.stringify(response)))
-// .catch(error => console.error('Error:', error));
+      // var snipcart = 'NWQ0MzI4MDgtMWMwMC00YjMzLWEzMDEtNjJiNzdjNzIzNzFhNjM2NzkwMjY5NjUxODA4Nzgz';
+      // var datakey = 'data-api-key';
+      // var acceptStatement = 'Accept:', acceptValue = 'application/json';
+      // var headers = {datakey: snipcart, acceptStatement: acceptValue };
+      //
+      // fetch("https://app.snipcart.com/api/orders?limit=5", {
+      // headers: headers,
+      // mode: 'no-cors',
+      // method: "POST"
+      // }).then(res => res.json())
+      // .then(response =>
+      // console.log('Success:', JSON.stringify(response)))
+      // .catch(function(error) {
+      // console.log('Looks like there was a problem: \n', error);
+      // });
 
 
-// apiInfo = response.text
-// print("The API info: ", apiInfo)
+      // One way to add text to the page       var thestatement = document.createTextNode("This API is not a nice API");
+      // One way to add text to the page       document.getElementById("mekestest").appendChild(thestatement);
+
+
   </script>
   </body>
 </html>
