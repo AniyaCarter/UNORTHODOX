@@ -1,0 +1,52 @@
+body{
+  background-color: black;
+}
+
+h1, h2{
+  color: white;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  /* text-decoration: none; */
+  margin-left: 20px;
+}
+
+.space{
+  height:50px;
+}
+
+ul.navbar{
+  font-family:'Share Tech Mono', monospace;
+  list-style-type: none;
+  margin: -10px;
+  padding: 85px;
+  overflow: hidden;
+  font-size:24px;
+  text-align: center;
+}
+
+li.l1 {
+  float:left;
+  padding-left: 175px;
+  color: white;
+}
+
+a:hover {
+  background-color: black;
+}
+
+div.navbarContainer{
+  margin-left:3px;
+}
+
+.navbarContainer{
+  border-style: double;
+}
+
+.footer {
+  text-align: center;
+}
