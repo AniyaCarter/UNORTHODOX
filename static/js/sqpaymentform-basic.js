@@ -1,5 +1,3 @@
-
-
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   if (SqPaymentForm.isSupportedBrowser()) {
 //     paymentForm.build();
@@ -30,8 +28,8 @@ function requestCardNonce(event) {
 var paymentForm = new SqPaymentForm({
 
   // Initialize the payment form elements
-  applicationId: applicationId,
-  locationId: locationId,
+  applicationId: applicationId2,
+  locationId: locationId2,
   inputClass: 'sq-input',
   autoBuild: false,
 
