@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title> Home of UNORTHODOX </title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/home.css') }}"/> 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+        <script src="{{ url_for('static',filename='js/home.js') }}"></script>
+        
+        <style type="text/css">
+          body { background: #000 url("{{ url_for('static',filename='images/logo_semitransparent.png') }}") no-repeat center -50%/auto fixed; }
+        </style>
+    </head>
+
+    <body>
+      <header>
+        <div  style="background-color:black; height:100px;"  class="navbarContainer col-md-12">
+          <ul class="navbar">
+            <li class="l1"><a hre="home">HOME</a></li>
+            <li class="l1"><a hrf="men">MEN</a></li>
+            <li class="l1"><a href="contact">CONTACT</a></li>
+            <li class="l1"><a hrf="faq"/>FAQ</a></li>
+            <li class="l1"><a href"about"/>ABOUT</a></li>
+            <li class="l1"><a href="informal"/>INFORMAL</a></li>
+            <li class="l1"><a href="formal"/>FORMAL</a></li>
+          </ul>
+        </div>
+      </header>
+
+    <!-- COUNTDOWN -->
+    <div class="col-md-12" style="height:100px;">
+      <h1> RELEASE DATE</h1>
+      <div id="demo"></div>
+    </div>
+
+
+    <div style="height:500px;"> </div>
+    <!-- Center -->
+
+    <!-- SUBSCRIPTION B0X -->
+
+    <section>
+      <form>
+        <input type="text" placeholder="Email">
+        <button type="submit" class="btn first">
+          <span class="start">SUBSCRIBE!</span>
+          <span class="done">THANK YOU!</span>
+        </button>
+      </form>
+    </section>
+
+    <footer style="background-color: black; height:50px;">
+      <button type="button" class=" btn-outline-success">
+        <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="contact">CONTACT</a>
+      </button>
+
+      <button type="button" class="btn-outline-success">
+        <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href"about">ABOUT</a>
+      </button>
+
+      <button type="button" class="btn-outline-success">
+        <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" hrf="faq">FAQ</a>
+      </button>
+    </footer>
+
+    <script>
+        // SUBSCRIPTION BOX //
+
+        $(document).ready(function () {
+            var basicTimeline = anime.timeline(), doneTimeline = anime.timeline();
+            var trigger = true;
+
+            // $('form .btn').click(function (e) {
+            //     e.preventDefault();
+            //     if ($(this).hasClass('first')) {
+            //         trigger = false;
+            //         $(this).removeClass('first').addClass('active');
+            //         // basicTimeline
+            //         .add({
+            //             targets: 'button',
+            //             width: 65,
+            //             paddingLeft: 17,
+            //             paddingRight: 17,
+            //             translateX: 97,
+            //             scale: 1.2,
+            //             duration: 1500
+            //         })
+            //         .add({
+            //             targets: 'form input',
+            //             width: 370,
+            //             opacity: 1,
+            //             duration: 2000,
+            //             offset: '-=1500'
+            //         })
+            //         .add({
+            //             targets: 'form button img',
+            //             opacity: 1,
+            //             translateX: 15,
+            //             duration: 2000,
+            //             offset: '-=1700',
+            //             complete: function(anim) {
+            //                 trigger = true;
+            //             }
+            //         })
+            //     } else if ($(this).hasClass('active') && trigger) {
+            //         $(this).removeClass('active').addClass('done');
+            //         // doneTimeline
+            //         .add({
+            //             targets: 'button',
+            //             translateX: 180,
+            //             duration: 1500,
+            //             scale: 1.2
+            //         })
+            //         .add({
+            //             targets: 'button img',
+            //             opacity: 0,
+            //             duration: 1000,
+            //             offset: '-=1200'
+            //         })
+            //         .add({
+            //             targets: 'button',
+            //             width: 187,
+            //             scale: 1.2,
+            //             translateX: -23,
+            //             duration: 1500,
+            //             offset: '-=1000'
+            //         })
+            //         .add({
+            //             targets: 'form input',
+            //             width: 0,
+            //             translateX: -193,
+            //             duration: 1500,
+            //             offset: '-=1500'
+            //         })
+            //         .add({
+            //             targets: 'form button .done',
+            //             opacity: 1,
+            //             duration: 1000,
+            //             offset: '-=1500'
+            //         })
+            //     }
+            // });
+        });
+
+        //Release Countdown //
+        // var countDownDate = new Date("Jan 20, 2019 15:37:25").getTime();
+
+        // var x = setInterval(function() {
+
+        // var now = new Date().getTime();
+
+        // var distance = countDownDate - now;
+
+        // var days      = Math.floor(distance / (1000 * 60 * 60 * 24));
+        // var hours     = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        // var minutes   = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        // var seconds   = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+
+        // if (distance < 0) {
+        //   clearInterval(x);
+        //   document.getElementById("demo").innerHTML = "EXPIRED";
+        // }, 1000);
+    </script>
+    </body>
+<html>

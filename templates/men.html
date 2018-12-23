@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <title> UnOrtho Mens Wear </title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/men.css') }}"/>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+        <script src="{{ url_for('static',filename='js/men.js') }}"></script>
+        
+        <style type="text/css">
+          body { background: url("{{ url_for('static',filename='images/bg.jpg') }}") no-repeat center center fixed; }
+        </style>
+    </head>
+
+    <body>
+          <header>
+            <div  style="background-color:transparent; height:200px;"  class="navbarContainer">
+              <ul class="navbar">
+                <li class="l1"><a href="home.html">HOME</a></li>
+                <li class="l1"><a href="men.html">MEN</a></li>
+                <li class="l1"><a href="contact.html">CONTACT</a></li>
+                <li class="l1"><a href="faq.html"/>FAQ</a></li>
+                <li class="l1"><a href="about.html"/>ABOUT</a></li>
+                <li class="l1"><a href="informal.html"/>INFORMAL</a></li>
+                <li class="l1"><a href="formal.html"/>FORMAL</a></li>
+              </ul>
+            </div>
+          </header>
+
+        <div style="text-align:center; background-color:transparent;">
+          <h1 style="color:white;">MENSWEAR</h1>
+
+          <img src="https://cdn2.yoox.biz/items/41/41841854xm_12_n_f.jpg" style="width:300px" alt="" />
+
+          <br />
+
+          <button>
+            <a href="informal.html">INFORMAL WEAR</a>
+          </button>
+
+          <br />
+
+          <img src="https://i.pinimg.com/736x/da/e3/36/dae3366e6f0da272f81271e384f0a06f.jpg" style="width:300px" alt="" />
+
+          <br />
+
+          <button>
+            <a href="formal.html">FORMAL WEAR</a>
+          </button>
+        </div>
+
+        <div style="height:500px;"> </div>
+
+        <footer style="background-color: black; height:50px;" class="footer">
+          <button type="button" class="btn btn-outline-success">
+          <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="Contact.html">CONTACT</a>
+            </button>
+
+          <button type="button" class="btn btn-outline-success">
+            <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="About.html">ABOUT</a>
+          </button>
+
+          <button type="button" class="btn btn-outline-success">
+            <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="FAQ.html">FAQ</a>
+          </button>
+        </footer>
+    </body>
+</html>

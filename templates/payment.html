@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title> Payment </title>
+
+	    <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
+	    <script type="text/javascript" src="{{ url_for('static',filename='js/sqpaymentform-basic.js') }}"></script>
+
+	    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/sqpaymentform-basic.css') }}" />
+
+        <style type="text/css">
+          body { background: url("{{ url_for('static',filename='images/bg.jpg') }}") no-repeat center center fixed; }
+        </style>
+	</head>
+
+	<body>
+		<header>
+			<div  style="background-color:transparent; height:200px;"  class="navbarContainer">
+				<ul class="navbar">
+					<li class="l1"><a href="home.html">HOME</a></li>
+					<li class="l1"><a href="men.html">MEN</a></li>
+					<li class="l1"><a href="contact.html">CONTACT</a></li>
+					<li class="l1"><a href="faq.html"/>FAQ</a></li>
+					<li class="l1"><a href="about.html"/>ABOUT</a></li>
+					<li class="l1"><a href="informal.html"/>INFORMAL</a></li>
+					<li class="l1"><a href="formal.html"/>FORMAL</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<button id='show-paymentform' onclick='buildForm()'>Pay now</button>
+
+		<div id="form-container">
+
+			<!-- Card Number: 4532759734545858
+			CVV: any three non-consecutive numbers
+			Expiration Date: any month and year in the future
+			Postal Code: 94103-->
+
+				<div id="sq-ccbox">
+				<!-- Be sure to replace the action attribute of the form with the path of the Transaction API charge endpoint URL you want to POST the nonce to (for example, "/process-card") -->
+					<form id="nonce-form" novalidate action="thankyou" method="get">
+						<fieldset>
+							<span class="label">Card Number</span>
+							<div id="sq-card-number"></div>
+							<!-- <input type="number" placeholder="Credit Card Number" /> -->
+							<div class="third">
+								<span class="label">Expiration</span>
+								<div id="sq-expiration-date"></div>
+							</div>
+							<!-- <input type="text" placeholder="Expiry Date" /> -->
+							<div class="third">
+								<span class="label">CVV</span>
+								<div id="sq-cvv"></div>
+							</div>
+							<!-- <input type="number" placeholder="CVV/CVC Number" /> -->
+							<div class="third">
+								<span class="label">Postal</span>
+								<div id="sq-postal-code"></div>
+							</div>
+						</fieldset>
+						<!-- <input type="number" placeholder="Zipcode" /> -->
+						<button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">Pay $1.00</button>
+
+						<div id="error"></div>
+
+						<!-- After a nonce is generated it will be assigned to this hidden input field. -->
+						<input type="hidden" id="card-nonce" name="nonce">
+					</form>
+				</div> <!-- end #sq-ccbox -->
+		</div> <!-- end #form-container -->
+
+        <div style="height:500px;"> </div>
+
+        <footer style="background-color: black; height:50px;" class="footer">
+          <button type="button" class="btn btn-outline-success">
+          <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="Contact.html">CONTACT</a>
+            </button>
+
+          <button type="button" class="btn btn-outline-success">
+            <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="About.html">ABOUT</a>
+          </button>
+
+          <button type="button" class="btn btn-outline-success">
+            <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="FAQ.html">FAQ</a>
+          </button>
+        </footer>
+
+	    <script type="text/javascript">
+			var paymentDiv = document.getElementById("form-container");
+			paymentDiv.style.display = "none";
+		</script>
+	</body>
+</html>
