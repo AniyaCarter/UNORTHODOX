@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title> Cart Page for Formal wear</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div  style="background-color:black; height:100px;"  class="navbarContainer col-md-12">
+        <ul class="navbar">
+          <li class="l1"><a href="Home.html">HOME</a></li>
+          <li class="l1"><a href="Men.html">MEN</a></li>
+        </ul>
+      </div>
+      <div style="text-align:right;">
+        <button class="shopping-cart"></button>
+      </div>
+    </header>
+    <div class="shopping-cart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+
+  <!-- Product #1 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="item-1.png" alt="" />
+    </div>
+
+    <div class="description">
+      <span>UNDOX Black Suit</span>
+      <span>Bball High</span>
+      <span>Black</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">$4,000</div>
+  </div>
+
+  <!-- Product #2 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="item-2.png" alt=""/>
+    </div>
+
+    <div class="description">
+      <span>UNDOX Blue Stripes Suit</span>
+      <span>Stripes Suit</span>
+      <span>Blue</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">$5,550</div>
+  </div>
+
+  <!-- Product #3 -->
+  <div class="item">
+    <div class="buttons">
+      <span class="delete-btn"></span>
+      <span class="like-btn"></span>
+    </div>
+
+    <div class="image">
+      <img src="item-3.png" alt="" />
+    </div>
+
+    <div class="description">
+      <span>UNDOX Black & White Suit</span>
+      <span>Black & White</span>
+      <span>Suit</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">
+        <img src="plus.svg" alt="" />
+      </button>
+      <input type="text" name="name" value="1">
+      <button class="minus-btn" type="button" name="button">
+        <img src="minus.svg" alt="" />
+      </button>
+    </div>
+
+    <div class="total-price">$6,500</div>
+  </div>
+</div>
+<footer style="background-color: black; height:50px;">
+  <button type="button" class=" btn-outline-success">
+  <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="Contact.html">CONTACT</a>
+    </button>
+
+  <button type="button" class="btn-outline-success">
+    <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="About.html">ABOUT</a>
+  </button>
+
+  <button type="button" class="btn-outline-success">
+    <a style="text-align:center; color:white; font-family:'Share Tech Mono', monospace; font-size:15px; "target="blank" href="FAQ.html">FAQ</a>
+  </button>
+</footer>
+<script>
+    $('.like-btn').on('click', function() {
+    $(this).toggleClass('is-active');
+    });
+
+    $('.minus-btn').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value &amp;gt; 1) {
+            value = value - 1;
+        } else {
+            value = 0;
+        }
+
+      $input.val(value);
+
+    });
+
+    $('.plus-btn').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value &amp;lt; 100) {
+            value = value + 1;
+        } else {
+            value =100;
+        }
+
+        $input.val(value);
+    });
+</script>
+  </body>
+  </html>
